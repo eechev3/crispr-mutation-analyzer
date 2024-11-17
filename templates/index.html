@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRISPR Mutation Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>CRISPR Mutation Analyzer</h1>
+    <textarea id="sequenceInput" placeholder="Enter DNA sequence here..."></textarea>
+    <input type="number" id="mutationPosition" placeholder="Position of mutation (0-based)" />
+    <input type="text" id="mutationType" placeholder="Mutation type (A/T/C/G)" />
+    <button id="analyzeButton">Analyze Mutation</button>
+    
+    <div id="results">
+        <h2>Results:</h2>
+        <p>Original Sequence: <span id="originalSequence"></span></p>
+        <p>Edited Sequence: <span id="editedSequence"></span></p>
+        <p>Original Protein: <span id="originalProtein"></span></p>
+        <p>Edited Protein: <span id="editedProtein"></span></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
